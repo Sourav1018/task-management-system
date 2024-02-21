@@ -20,14 +20,6 @@ export default defineComponent({
     const miniState = ref(true);
     const $q = useQuasar();
 
-    const desktopWidth = computed(() => {
-      return $q.screen.width == 500 ? 200 : 300;
-    });
-
-    const mobileWidth = computed(() => {
-      return $q.screen.width != 500 ? 200 : 300;
-    });
-
     const drawerWidth = computed(() => {
       return $q.screen.xs ? 200 : 300;
     });

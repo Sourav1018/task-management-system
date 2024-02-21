@@ -28,24 +28,26 @@
         </q-item-section>
       </q-item>
     </q-list>
-    <div class="drawer-footer">
-      <div>
-        <q-item clickable to="/profile" exact active-class="active-element">
-          <q-item-section avatar>
-            <q-icon name="fa-solid fa-user" color="grey-10" />
-          </q-item-section>
-        </q-item>
-      </div>
+    <div class="drawer-footer flex flex-center">
+      <q-item
+        clickable
+        to="/profile"
+        exact
+        active-class="active-element"
+        class="q-pa-none"
+      >
+        <q-item-section avatar class="q-pa-none flex-center">
+          <q-icon name="fa-solid fa-user" color="grey-10" />
+        </q-item-section>
+      </q-item>
 
       <q-separator class="q-my-sm" inset />
 
-      <div>
-        <q-item clickable @click="signOut">
-          <q-item-section avatar>
-            <q-icon name="fa-solid fa-right-from-bracket" color="grey-10" />
-          </q-item-section>
-        </q-item>
-      </div>
+      <q-item clickable @click="signOut" class="q-pa-none">
+        <q-item-section avatar class="q-pa-none flex-center">
+          <q-icon name="fa-solid fa-right-from-bracket" color="grey-10" />
+        </q-item-section>
+      </q-item>
     </div>
   </q-drawer>
 </template>
