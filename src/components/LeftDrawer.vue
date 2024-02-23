@@ -19,9 +19,22 @@
         clickable
         class="q-pa-none"
         exact
+        to="/projects"
+        active-class="active-element"
+      >
+        <q-item-section avatar class="q-pa-none flex-center">
+          <q-icon name="fa-solid fa-folder" color="grey-10" />
+        </q-item-section>
+      </q-item>
+
+      <q-separator class="q-my-sm" inset />
+
+      <q-item
+        clickable
+        class="q-pa-none"
+        exact
         to="/task"
         active-class="active-element"
-        @click="selected"
       >
         <q-item-section avatar class="q-pa-none flex-center">
           <q-icon name="fa-solid fa-list-check" color="grey-10" />
@@ -54,8 +67,7 @@
 
 <script>
 import { useQuasar } from "quasar";
-import { computed } from "vue";
-import { ref, defineComponent } from "vue";
+import { ref, defineComponent, computed } from "vue";
 
 export default defineComponent({
   name: "LeftDrawer",
@@ -71,7 +83,6 @@ export default defineComponent({
       console.log("logout sucessfully");
     }
 
-    const selected = () => {};
     return {
       miniState,
       drawerWidth,

@@ -3,10 +3,13 @@ const routes = [
     path: "/",
     component: () => import("layouts/MainLayout.vue"),
     children: [
-      { path: "/task", component: () => import("pages/Task/TaskLog.vue") },
+      {
+        path: "/projects",
+        component: () => import("pages/Task/TaskIndex.vue"),
+      },
       {
         path: "/profile",
-        component: () => import("pages/profile/ProfileSettings.vue"),
+        component: () => import("pages/Profile/ProfileSettings.vue"),
       },
     ],
   },

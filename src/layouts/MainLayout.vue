@@ -1,7 +1,6 @@
 <template>
   <q-layout>
-    <LeftDrawer></LeftDrawer>
-    <RightDrawer></RightDrawer>
+    <SideLayout></SideLayout>
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -11,14 +10,12 @@
 <script>
 import { useQuasar } from "quasar";
 import { ref, defineComponent, computed } from "vue";
-import LeftDrawer from "src/components/LeftDrawer.vue";
-import RightDrawer from "src/components/RightDrawer.vue";
+import SideLayout from "src/components/SideLayout.vue";
 
 export default defineComponent({
   name: "MainLayout",
   components: {
-    LeftDrawer,
-    RightDrawer,
+    SideLayout,
   },
   setup() {
     const miniState = ref(true);
